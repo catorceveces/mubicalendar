@@ -30,7 +30,7 @@ def main():
 
    d = datetime.now().date()
    today = datetime(d.year, d.month, d.day, 7)
-   expiration = datetime(d.year, d.month, d.day, 7)+timedelta(days=29)
+   expiration = datetime(d.year, d.month, d.day, 8)+timedelta(days=29)
    t_start = today.isoformat()
    t_end = (today + timedelta(hours=1)).isoformat()
    e_start = expiration.isoformat()
@@ -47,7 +47,7 @@ def main():
        }
    ).execute()
 
-   # create an event of expiration date 29 days after at the same time
+   # create an event of expiration date 29 days after 
 
    e_event = service.events().insert(calendarId='7inlsk349lq5fvf2vorls9mpe8@group.calendar.google.com',
         body={
